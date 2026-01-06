@@ -53,8 +53,8 @@ export default ({ activity, children }: Props) => {
             <div className={'col-span-10 sm:col-span-9 flex'}>
                 <div className={'flex-1 px-4 sm:px-0'}>
                     <div className={'flex items-center text-gray-50'}>
-                        <Tooltip placement={'top'} content={actor?.email || 'System User'}>
-                            <span>{actor?.username || 'System'}</span>
+                        <Tooltip placement={'top'} content={actor?.email || '系統使用者'}>
+                            <span>{actor?.username || '系統'}</span>
                         </Tooltip>
                         <span className={'text-gray-400'}>&nbsp;&mdash;&nbsp;</span>
                         <Link
@@ -65,12 +65,12 @@ export default ({ activity, children }: Props) => {
                         </Link>
                         <div className={classNames(style.icons, 'group-hover:text-gray-300')}>
                             {activity.isApi && (
-                                <Tooltip placement={'top'} content={'Using API Key'}>
+                                <Tooltip placement={'top'} content={'使用 API 金鑰'}>
                                     <TerminalIcon />
                                 </Tooltip>
                             )}
                             {activity.event.startsWith('server:sftp.') && (
-                                <Tooltip placement={'top'} content={'Using SFTP'}>
+                                <Tooltip placement={'top'} content={'使用 SFTP'}>
                                     <FolderOpenIcon />
                                 </Tooltip>
                             )}
