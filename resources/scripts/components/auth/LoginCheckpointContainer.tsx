@@ -45,7 +45,7 @@ const LoginCheckpointContainer = () => {
             </div>
             <div css={tw`mt-6`}>
                 <Button size={'xlarge'} type={'submit'} disabled={isSubmitting} isLoading={isSubmitting}>
-                    Continue
+                    繼續
                 </Button>
             </div>
             <div css={tw`mt-6 text-center`}>
@@ -65,7 +65,7 @@ const LoginCheckpointContainer = () => {
                     to={'/auth/login'}
                     css={tw`text-xs text-neutral-500 tracking-wide uppercase no-underline hover:text-neutral-700`}
                 >
-                    Return to Login
+                    返回登入
                 </Link>
             </div>
         </LoginFormContainer>

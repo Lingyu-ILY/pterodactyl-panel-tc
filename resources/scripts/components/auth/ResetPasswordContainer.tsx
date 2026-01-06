@@ -63,7 +63,7 @@ export default ({ match, location }: RouteComponentProps<{ token: string }>) => 
             {({ isSubmitting }) => (
                 <LoginFormContainer title={'重設密碼'} css={tw`w-full flex`}>
                     <div>
-                        <label>Email</label>
+                        <label>電子郵件</label>
                         <Input value={email} isLight disabled />
                     </div>
                     <div css={tw`mt-6`}>
@@ -80,7 +80,7 @@ export default ({ match, location }: RouteComponentProps<{ token: string }>) => 
                     </div>
                     <div css={tw`mt-6`}>
                         <Button size={'xlarge'} type={'submit'} disabled={isSubmitting} isLoading={isSubmitting}>
-                            Reset Password
+                            重設密碼
                         </Button>
                     </div>
                     <div css={tw`mt-6 text-center`}>
@@ -88,7 +88,7 @@ export default ({ match, location }: RouteComponentProps<{ token: string }>) => 
                             to={'/auth/login'}
                             css={tw`text-xs text-neutral-500 tracking-wide no-underline uppercase hover:text-neutral-600`}
                         >
-                            Return to Login
+                            返回登入
                         </Link>
                     </div>
                 </LoginFormContainer>
