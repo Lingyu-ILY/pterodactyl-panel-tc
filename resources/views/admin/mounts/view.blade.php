@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    掉載 &rarr; 查看 &rarr; {{ $mount->id }}
+    掛載 &rarr; 查看 &rarr; {{ $mount->id }}
 @endsection
 
 @section('content-header')
     <h1>{{ $mount->name }}<small>{{ str_limit($mount->description, 75) }}</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理</a></li>
-        <li><a href="{{ route('admin.mounts') }}">掉載</a></li>
+        <li><a href="{{ route('admin.mounts') }}">掛載</a></li>
         <li class="active">{{ $mount->name }}</li>
     </ol>
 @endsection
@@ -18,7 +18,7 @@
         <div class="col-sm-6">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">掉載詳細資訊</h3>
+                    <h3 class="box-title">掛載詳細資訊</h3>
                 </div>
 
                 <form action="{{ route('admin.mounts.view', $mount->id) }}" method="POST">
@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label class="form-label">使用者可掉載</label>
+                                <label class="form-label">使用者可掛載</label>
 
                                 <div>
                                     <div class="radio radio-success radio-inline">

@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    掉載
+    掛載
 @endsection
 
 @section('content-header')
-    <h1>掉載<small>為伺服器設定和管理額外的掉載點。</small></h1>
+    <h1>掛載<small>為伺服器設定和管理額外的掛載點。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理</a></li>
-        <li class="active">掉載</li>
+        <li class="active">掛載</li>
     </ol>
 @endsection
 
@@ -17,10 +17,10 @@
         <div class="col-xs-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">掉載清單</h3>
+                    <h3 class="box-title">掛載清單</h3>
 
                     <div class="box-tools">
-                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newMountModal">建立新掉載</button>
+                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newMountModal">建立新掛載</button>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@
                             <span aria-hidden="true" style="color: #FFFFFF">&times;</span>
                         </button>
 
-                        <h4 class="modal-title">建立掉載</h4>
+                        <h4 class="modal-title">建立掛載</h4>
                     </div>
 
                     <div class="modal-body">
@@ -72,25 +72,25 @@
                             <div class="col-md-12">
                                 <label for="pName" class="form-label">名稱</label>
                                 <input type="text" id="pName" name="name" class="form-control" />
-                                <p class="text-muted small">用於區分此掉載與其他掉載的唯一名稱。</p>
+                                <p class="text-muted small">用於區分此掛載與其他掛載的唯一名稱。</p>
                             </div>
 
                             <div class="col-md-12">
                                 <label for="pDescription" class="form-label">描述</label>
                                 <textarea id="pDescription" name="description" class="form-control" rows="4"></textarea>
-                                <p class="text-muted small">此掉載的詳細描述，必須少於 191 個字元。</p>
+                                <p class="text-muted small">此掛載的詳細描述，必須少於 191 個字元。</p>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="pSource" class="form-label">來源</label>
                                 <input type="text" id="pSource" name="source" class="form-control" />
-                                <p class="text-muted small">要掉載到容器的主機系統上的檔案路徑。</p>
+                                <p class="text-muted small">要掛載到容器的主機系統上的檔案路徑。</p>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="pTarget" class="form-label">目標</label>
                                 <input type="text" id="pTarget" name="target" class="form-control" />
-                                <p class="text-muted small">掉載在容器內可存取的位置。</p>
+                                <p class="text-muted small">掛載在容器內可存取的位置。</p>
                             </div>
 
                             <div class="col-md-6">
@@ -108,11 +108,11 @@
                                     </div>
                                 </div>
 
-                                <p class="text-muted small">此掉載在容器內是否為唯讀？</p>
+                                <p class="text-muted small">此掛載在容器內是否為唯讀？</p>
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label">使用者可掉載</label>
+                                <label class="form-label">使用者可掛載</label>
 
                                 <div>
                                     <div class="radio radio-success radio-inline">
@@ -126,7 +126,7 @@
                                     </div>
                                 </div>
 
-                                <p class="text-muted small">使用者是否能夠自行掉載此項？</p>
+                                <p class="text-muted small">使用者是否能夠自行掛載此項？</p>
                             </div>
                         </div>
                     </div>
