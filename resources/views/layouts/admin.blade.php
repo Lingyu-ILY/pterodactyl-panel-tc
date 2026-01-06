@@ -119,7 +119,7 @@
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nests') ?: 'active' }}">
                             <a href="{{ route('admin.nests') }}">
-                                <i class="fa fa-th-large"></i> <span>巢</span>
+                                <i class="fa fa-th-large"></i> <span>Nests</span>
                             </a>
                         </li>
                     </ul>
