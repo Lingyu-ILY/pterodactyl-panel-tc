@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>{{ $nest->name }}<small>{{ str_limit($nest->description, 50) }}</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li><a href="{{ route('admin.nests') }}">Nests</a></li>
         <li class="active">{{ $nest->name }}</li>
     </ol>
@@ -20,14 +20,14 @@
             <div class="box">
                 <div class="box-body">
                     <div class="form-group">
-                        <label class="control-label">Name <span class="field-required"></span></label>
+                        <label class="control-label">名稱 <span class="field-required"></span></label>
                         <div>
                             <input type="text" name="name" class="form-control" value="{{ $nest->name }}" />
-                            <p class="text-muted"><small>This should be a descriptive category name that encompasses all of the options within the service.</small></p>
+                            <p class="text-muted"><small>這應該是一個描述性的類別名稱，涵蓋服務內所有的選項。</small></p>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Description</label>
+                        <label class="control-label">描述</label>
                         <div>
                             <textarea name="description" class="form-control" rows="7">{{ $nest->description }}</textarea>
                         </div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="box-footer">
                     {!! csrf_field() !!}
-                    <button type="submit" name="_method" value="PATCH" class="btn btn-primary btn-sm pull-right">Save</button>
+                    <button type="submit" name="_method" value="PATCH" class="btn btn-primary btn-sm pull-right">儲存</button>
                     <button id="deleteButton" type="submit" name="_method" value="DELETE" class="btn btn-sm btn-danger muted muted-hover"><i class="fa fa-trash-o"></i></button>
                 </div>
             </div>
@@ -48,21 +48,21 @@
                     <label class="control-label">Nest ID</label>
                     <div>
                         <input type="text" readonly class="form-control" value="{{ $nest->id }}" />
-                        <p class="text-muted small">A unique ID used for identification of this nest internally and through the API.</p>
+                        <p class="text-muted small">用於在系統內部和透過 API 識別此 Nest 的唯一 ID。</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Author</label>
+                    <label class="control-label">作者</label>
                     <div>
                         <input type="text" readonly class="form-control" value="{{ $nest->author }}" />
-                        <p class="text-muted small">The author of this service option. Please direct questions and issues to them unless this is an official option authored by <code>support@pterodactyl.io</code>.</p>
+                        <p class="text-muted small">此服務選項的作者。請將問題和疑慮直接向他們提出，除非這是由 <code>support@pterodactyl.io</code> 編寫的官方選項。</p>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label">UUID</label>
                     <div>
                         <input type="text" readonly class="form-control" value="{{ $nest->uuid }}" />
-                        <p class="text-muted small">A UUID that all servers using this option are assigned for identification purposes.</p>
+                        <p class="text-muted small">所有使用此選項的伺服器分配的 UUID，用於識別目的。</p>
                     </div>
                 </div>
             </div>
@@ -79,9 +79,9 @@
                 <table class="table table-hover">
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th class="text-center">Servers</th>
+                        <th>名稱</th>
+                        <th>描述</th>
+                        <th class="text-center">伺服器</th>
                         <th class="text-center"></th>
                     </tr>
                     @foreach($nest->eggs as $egg)
@@ -98,7 +98,7 @@
                 </table>
             </div>
             <div class="box-footer">
-                <a href="{{ route('admin.nests.egg.new') }}"><button class="btn btn-success btn-sm pull-right">New Egg</button></a>
+                <a href="{{ route('admin.nests.egg.new') }}"><button class="btn btn-success btn-sm pull-right">新增 Egg</button></a>
             </div>
         </div>
     </div>
@@ -109,7 +109,7 @@
     @parent
     <script>
         $('#deleteButton').on('mouseenter', function (event) {
-            $(this).find('i').html(' Delete Nest');
+            $(this).find('i').html(' 刪除 Nest');
         }).on('mouseleave', function (event) {
             $(this).find('i').html('');
         });
