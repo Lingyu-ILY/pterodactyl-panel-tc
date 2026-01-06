@@ -37,7 +37,7 @@ export default () => {
     }, []);
 
     return (
-        <ServerContentBlock title={'Databases'}>
+        <ServerContentBlock title={'資料庫'}>
             <FlashMessageRender byKey={'databases'} css={tw`mb-4`} />
             {!databases.length && loading ? (
                 <Spinner size={'large'} centered />
@@ -55,16 +55,15 @@ export default () => {
                         ) : (
                             <p css={tw`text-center text-sm text-neutral-300`}>
                                 {databaseLimit > 0
-                                    ? 'It looks like you have no databases.'
-                                    : 'Databases cannot be created for this server.'}
+                                    ? '看來您沒有任何資料庫。'
+                                    : '無法為此伺服器建立資料庫。'}
                             </p>
                         )}
                         <Can action={'database.create'}>
                             <div css={tw`mt-6 flex items-center justify-end`}>
                                 {databaseLimit > 0 && databases.length > 0 && (
                                     <p css={tw`text-sm text-neutral-300 mb-4 sm:mr-6 sm:mb-0`}>
-                                        {databases.length} of {databaseLimit} databases have been allocated to this
-                                        server.
+                                        已為此伺服器分配 {databases.length} 個資料庫，上限為 {databaseLimit} 個。
                                     </p>
                                 )}
                                 {databaseLimit > 0 && databaseLimit !== databases.length && (
