@@ -25,17 +25,17 @@ export default () => {
     }, [error]);
 
     return (
-        <PageContentBlock title={'SSH Keys'}>
+        <PageContentBlock title={'SSH 金鑰'}>
             <FlashMessageRender byKey={'account'} />
             <div css={tw`md:flex flex-nowrap my-10`}>
-                <ContentBox title={'Add SSH Key'} css={tw`flex-none w-full md:w-1/2`}>
+                <ContentBox title={'新增 SSH 金鑰'} css={tw`flex-none w-full md:w-1/2`}>
                     <CreateSSHKeyForm />
                 </ContentBox>
-                <ContentBox title={'SSH Keys'} css={tw`flex-1 overflow-hidden mt-8 md:mt-0 md:ml-8`}>
+                <ContentBox title={'SSH 金鑰'} css={tw`flex-1 overflow-hidden mt-8 md:mt-0 md:ml-8`}>
                     <SpinnerOverlay visible={!data && isValidating} />
                     {!data || !data.length ? (
                         <p css={tw`text-center text-sm`}>
-                            {!data ? 'Loading...' : 'No SSH Keys exist for this account.'}
+                            {!data ? '載入中...' : '此帳號尚無 SSH 金鑰。'}
                         </p>
                     ) : (
                         data.map((key, index) => (
@@ -48,7 +48,7 @@ export default () => {
                                     <p css={tw`text-sm break-words font-medium`}>{key.name}</p>
                                     <p css={tw`text-xs mt-1 font-mono truncate`}>SHA256:{key.fingerprint}</p>
                                     <p css={tw`text-xs mt-1 text-neutral-300 uppercase`}>
-                                        Added on:&nbsp;
+                                        新增於：&nbsp;
                                         {format(key.createdAt, 'MMM do, yyyy HH:mm')}
                                     </p>
                                 </div>
