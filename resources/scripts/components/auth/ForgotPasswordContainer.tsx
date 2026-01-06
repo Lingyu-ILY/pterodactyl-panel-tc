@@ -38,7 +38,7 @@ export default () => {
                 console.error(error);
 
                 setSubmitting(false);
-                addFlash({ type: 'error', title: 'Error', message: httpErrorToHuman(error) });
+                addFlash({ type: 'error', title: '錯誤', message: httpErrorToHuman(error) });
             });
 
             return;
@@ -47,11 +47,11 @@ export default () => {
         requestPasswordResetEmail(email, token)
             .then((response) => {
                 resetForm();
-                addFlash({ type: 'success', title: 'Success', message: response });
+                addFlash({ type: 'success', title: '成功', message: response });
             })
             .catch((error) => {
                 console.error(error);
-                addFlash({ type: 'error', title: 'Error', message: httpErrorToHuman(error) });
+                addFlash({ type: 'error', title: '錯誤', message: httpErrorToHuman(error) });
             })
             .then(() => {
                 setToken('');
@@ -67,17 +67,17 @@ export default () => {
             initialValues={{ email: '' }}
             validationSchema={object().shape({
                 email: string()
-                    .email('A valid email address must be provided to continue.')
-                    .required('A valid email address must be provided to continue.'),
+                    .email('需要提供有效的電子郵件地址才能繼續。')
+                    .required('需要提供有效的電子郵件地址才能繼續。'),
             })}
         >
             {({ isSubmitting, setSubmitting, submitForm }) => (
-                <LoginFormContainer title={'Request Password Reset'} css={tw`w-full flex`}>
+                <LoginFormContainer title={'申請重設密碼'} css={tw`w-full flex`}>
                     <Field
                         light
-                        label={'Email'}
+                        label={'電子郵件'}
                         description={
-                            'Enter your account email address to receive instructions on resetting your password.'
+                            '輸入你的帳號電子郵件地址以接收重設密碼的指示。'
                         }
                         name={'email'}
                         type={'email'}
