@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    巢 &rarr; 新 Egg
+    Nests &rarr; 新 Egg
 @endsection
 
 @section('content-header')
     <h1>新 Egg<small>建立新的 Egg 以指定給伺服器。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理</a></li>
-        <li><a href="{{ route('admin.nests') }}">巢</a></li>
+        <li><a href="{{ route('admin.nests') }}">Nests</a></li>
         <li class="active">新 Egg</li>
     </ol>
 @endsection
@@ -25,14 +25,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="pNestId" class="form-label">關聯的巢</label>
+                                <label for="pNestId" class="form-label">關聯的 Nest</label>
                                 <div>
                                     <select name="nest_id" id="pNestId">
                                         @foreach($nests as $nest)
                                             <option value="{{ $nest->id }}" {{ old('nest_id') != $nest->id ?: 'selected' }}>{{ $nest->name }} &lt;{{ $nest->author }}&gt;</option>
                                         @endforeach
                                     </select>
-                                    <p class="text-muted small">將巢視為一個分類。您可以在一個巢中放置多個 Egg，但請考慮在每個巢中僅放置相關的 Egg。</p>
+                                    <p class="text-muted small">將 Nest 視為一個分類。您可以在一個 Nest 中放置多個 Egg，但請考慮在每個 Nest 中僅放置相關的 Egg。</p>
                                 </div>
                             </div>
                             <div class="form-group">

@@ -8,7 +8,7 @@
     <h1>{{ $egg->name }}<small>管理此 Egg 的變數。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理</a></li>
-        <li><a href="{{ route('admin.nests') }}">巢</a></li>
+        <li><a href="{{ route('admin.nests') }}">Nests</a></li>
         <li><a href="{{ route('admin.nests.view', $egg->nest->id) }}">{{ $egg->nest->name }}</a></li>
         <li><a href="{{ route('admin.nests.egg.view', $egg->id) }}">{{ $egg->name }}</a></li>
         <li class="active">變數</li>
