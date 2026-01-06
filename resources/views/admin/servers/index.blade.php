@@ -53,7 +53,7 @@
                                 </td>
                                 <td class="text-center">
                                     @if($server->isSuspended())
-                                        <span class="label bg-maroon">已暫停</span>
+                                        <span class="label bg-maroon">已停權</span>
                                     @elseif(! $server->isInstalled())
                                         <span class="label label-warning">安裝中</span>
                                     @else

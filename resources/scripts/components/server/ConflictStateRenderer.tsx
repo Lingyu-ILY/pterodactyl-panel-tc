@@ -20,9 +20,9 @@ export default () => {
         />
     ) : status === 'suspended' ? (
         <ScreenBlock
-            title={'伺服器已暫停'}
+            title={'伺服器已停權'}
             image={ServerErrorSvg}
-            message={'此伺服器已被暫停，無法存取。'}
+            message={'此伺服器已被停權，無法存取。'}
         />
     ) : isNodeUnderMaintenance ? (
         <ScreenBlock
