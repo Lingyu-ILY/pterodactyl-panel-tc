@@ -1,16 +1,16 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ $node->name }}: Servers
+    {{ $node->name }}: 伺服器
 @endsection
 
 @section('content-header')
-    <h1>{{ $node->name }}<small>All servers currently assigned to this node.</small></h1>
+    <h1>{{ $node->name }}<small>目前分配給此節點的所有伺服器。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.nodes') }}">Nodes</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.nodes') }}">節點</a></li>
         <li><a href="{{ route('admin.nodes.view', $node->id) }}">{{ $node->name }}</a></li>
-        <li class="active">Servers</li>
+        <li class="active">伺服器</li>
     </ol>
 @endsection
 
@@ -19,11 +19,11 @@
     <div class="col-xs-12">
         <div class="nav-tabs-custom nav-tabs-floating">
             <ul class="nav nav-tabs">
-                <li><a href="{{ route('admin.nodes.view', $node->id) }}">About</a></li>
-                <li><a href="{{ route('admin.nodes.view.settings', $node->id) }}">Settings</a></li>
-                <li><a href="{{ route('admin.nodes.view.configuration', $node->id) }}">Configuration</a></li>
-                <li><a href="{{ route('admin.nodes.view.allocation', $node->id) }}">Allocation</a></li>
-                <li class="active"><a href="{{ route('admin.nodes.view.servers', $node->id) }}">Servers</a></li>
+                <li><a href="{{ route('admin.nodes.view', $node->id) }}">關於</a></li>
+                <li><a href="{{ route('admin.nodes.view.settings', $node->id) }}">設定</a></li>
+                <li><a href="{{ route('admin.nodes.view.configuration', $node->id) }}">設定檔</a></li>
+                <li><a href="{{ route('admin.nodes.view.allocation', $node->id) }}">分配</a></li>
+                <li class="active"><a href="{{ route('admin.nodes.view.servers', $node->id) }}">伺服器</a></li>
             </ul>
         </div>
     </div>
@@ -32,15 +32,15 @@
     <div class="col-sm-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Process Manager</h3>
+                <h3 class="box-title">程序管理器</h3>
             </div>
             <div class="box-body table-responsive no-padding">
                 <table class="table table-hover">
                     <tr>
                         <th>ID</th>
-                        <th>Server Name</th>
-                        <th>Owner</th>
-                        <th>Service</th>
+                        <th>伺服器名稱</th>
+                        <th>擁有者</th>
+                        <th>服務</th>
                     </tr>
                     @foreach($servers as $server)
                         <tr data-server="{{ $server->uuid }}">
