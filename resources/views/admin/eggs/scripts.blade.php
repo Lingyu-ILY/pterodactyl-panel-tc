@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    Nests &rarr; Egg: {{ $egg->name }} &rarr; Install Script
+    巢 &rarr; Egg：{{ $egg->name }} &rarr; 安裝腳本
 @endsection
 
 @section('content-header')
-    <h1>{{ $egg->name }}<small>Manage the install script for this Egg.</small></h1>
+    <h1>{{ $egg->name }}<small>管理此 Egg 的安裝腳本。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.nests') }}">Nests</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.nests') }}">巢</a></li>
         <li><a href="{{ route('admin.nests.view', $egg->nest->id) }}">{{ $egg->nest->name }}</a></li>
         <li><a href="{{ route('admin.nests.egg.view', $egg->id) }}">{{ $egg->name }}</a></li>
         <li class="active">{{ $egg->name }}</li>
@@ -20,9 +20,9 @@
     <div class="col-xs-12">
         <div class="nav-tabs-custom nav-tabs-floating">
             <ul class="nav nav-tabs">
-                <li><a href="{{ route('admin.nests.egg.view', $egg->id) }}">Configuration</a></li>
-                <li><a href="{{ route('admin.nests.egg.variables', $egg->id) }}">Variables</a></li>
-                <li class="active"><a href="{{ route('admin.nests.egg.scripts', $egg->id) }}">Install Script</a></li>
+                <li><a href="{{ route('admin.nests.egg.view', $egg->id) }}">設定</a></li>
+                <li><a href="{{ route('admin.nests.egg.variables', $egg->id) }}">變數</a></li>
+                <li class="active"><a href="{{ route('admin.nests.egg.scripts', $egg->id) }}">安裝腳本</a></li>
             </ul>
         </div>
     </div>
@@ -32,12 +32,12 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Install Script</h3>
+                    <h3 class="box-title">安裝腳本</h3>
                 </div>
                 @if(! is_null($egg->copyFrom))
                     <div class="box-body">
                         <div class="callout callout-warning no-margin">
-                            This service option is copying installation scripts and container options from <a href="{{ route('admin.nests.egg.view', $egg->copyFrom->id) }}">{{ $egg->copyFrom->name }}</a>. Any changes you make to this script will not apply unless you select "None" from the dropdown box below.
+                            此服務選項正從 <a href="{{ route('admin.nests.egg.view', $egg->copyFrom->id) }}">{{ $egg->copyFrom->name }}</a> 複製安裝腳本和容器選項。除非您從下方下拉選單中選擇「無」，否則您對此腳本所做的任何變更都不會套用。
                         </div>
                     </div>
                 @endif
@@ -47,29 +47,29 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="form-group col-sm-4">
-                            <label class="control-label">Copy Script From</label>
+                            <label class="control-label">從以下選項複製腳本</label>
                             <select id="pCopyScriptFrom" name="copy_script_from">
-                                <option value="">None</option>
+                                <option value="">無</option>
                                 @foreach($copyFromOptions as $opt)
                                     <option value="{{ $opt->id }}" {{ $egg->copy_script_from !== $opt->id ?: 'selected' }}>{{ $opt->name }}</option>
                                 @endforeach
                             </select>
-                            <p class="text-muted small">If selected, script above will be ignored and script from selected option will be used in place.</p>
+                            <p class="text-muted small">如果選擇，則上方的腳本將被忽略，並使用所選選項的腳本來取代。</p>
                         </div>
                         <div class="form-group col-sm-4">
-                            <label class="control-label">Script Container</label>
+                            <label class="control-label">腳本容器</label>
                             <input type="text" name="script_container" class="form-control" value="{{ $egg->script_container }}" />
-                            <p class="text-muted small">Docker container to use when running this script for the server.</p>
+                            <p class="text-muted small">執行此伺服器腳本時使用的 Docker 容器。</p>
                         </div>
                         <div class="form-group col-sm-4">
-                            <label class="control-label">Script Entrypoint Command</label>
+                            <label class="control-label">腳本入口點命令</label>
                             <input type="text" name="script_entry" class="form-control" value="{{ $egg->script_entry }}" />
-                            <p class="text-muted small">The entrypoint command to use for this script.</p>
+                            <p class="text-muted small">此腳本使用的入口點命令。</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 text-muted">
-                            The following service options rely on this script:
+                            以下服務選項依賴此腳本：
                             @if(count($relyOnScript) > 0)
                                 @foreach($relyOnScript as $rely)
                                     <a href="{{ route('admin.nests.egg.view', $rely->id) }}">
@@ -77,7 +77,7 @@
                                     </a>
                                 @endforeach
                             @else
-                                <em>none</em>
+                                <em>無</em>
                             @endif
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                 <div class="box-footer">
                     {!! csrf_field() !!}
                     <textarea name="script_install" class="hidden"></textarea>
-                    <button type="submit" name="_method" value="PATCH" class="btn btn-primary btn-sm pull-right">Save</button>
+                    <button type="submit" name="_method" value="PATCH" class="btn btn-primary btn-sm pull-right">儲存</button>
                 </div>
             </div>
         </div>
