@@ -6,8 +6,8 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/pterodactyl/panel?style=for-the-badge)
 
 # 同場提供 Blueprint 繁體中文版以及 Docker 容器
-由 Emma 製作的模組管理框架 [Blueprint 繁體中文版](https://github.com/Lingyu-ILY/blueprint-tw)，與上游同步更新  
-另有兩者的整合版 [Blueprint Docker](https://github.com/Lingyu-ILY/blueprint-docker-tw) 可供直接佈署並使用
+由 Emma 製作的模組管理框架 [Blueprint 繁體中文版](https://github.com/Lingyu-ILY/blueprint-tc)，與上游同步更新  
+另有兩者的整合版 [Blueprint Docker](https://github.com/Lingyu-ILY/blueprint-docker-tc) 可供直接佈署並使用
 
 # Pterodactyl 面板
 
