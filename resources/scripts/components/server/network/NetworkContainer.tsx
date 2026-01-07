@@ -51,7 +51,7 @@ const NetworkContainer = () => {
     };
 
     return (
-        <ServerContentBlock showFlashKey={'server:network'} title={'Network'}>
+        <ServerContentBlock showFlashKey={'server:network'} title={'網路'}>
             {!data ? (
                 <Spinner size={'large'} centered />
             ) : (
@@ -64,12 +64,11 @@ const NetworkContainer = () => {
                             <SpinnerOverlay visible={loading} />
                             <div css={tw`mt-6 sm:flex items-center justify-end`}>
                                 <p css={tw`text-sm text-neutral-300 mb-4 sm:mr-6 sm:mb-0`}>
-                                    You are currently using {data.length} of {allocationLimit} allowed allocations for
-                                    this server.
+                                    目前此伺服器已使用 {data.length} / {allocationLimit} 個允許的分配。
                                 </p>
                                 {allocationLimit > data.length && (
                                     <Button css={tw`w-full sm:w-auto`} color={'primary'} onClick={onCreateAllocation}>
-                                        Create Allocation
+                                        建立分配
                                     </Button>
                                 )}
                             </div>

@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    List Servers
+    伺服器列表
 @endsection
 
 @section('content-header')
-    <h1>Servers<small>All servers available on the system.</small></h1>
+    <h1>伺服器<small>系統上所有可用的伺服器。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li class="active">Servers</li>
+        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li class="active">伺服器</li>
     </ol>
 @endsection
 
@@ -17,14 +17,14 @@
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Server List</h3>
+                <h3 class="box-title">伺服器列表</h3>
                 <div class="box-tools search01">
                     <form action="{{ route('admin.servers') }}" method="GET">
                         <div class="input-group input-group-sm">
-                            <input type="text" name="filter[*]" class="form-control pull-right" value="{{ request()->input()['filter']['*'] ?? '' }}" placeholder="Search Servers">
+                            <input type="text" name="filter[*]" class="form-control pull-right" value="{{ request()->input()['filter']['*'] ?? '' }}" placeholder="搜尋伺服器">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                <a href="{{ route('admin.servers.new') }}"><button type="button" class="btn btn-sm btn-primary" style="border-radius: 0 3px 3px 0;margin-left:-1px;">Create New</button></a>
+                                <a href="{{ route('admin.servers.new') }}"><button type="button" class="btn btn-sm btn-primary" style="border-radius: 0 3px 3px 0;margin-left:-1px;">建立新伺服器</button></a>
                             </div>
                         </div>
                     </form>
@@ -34,11 +34,11 @@
                 <table class="table table-hover">
                     <tbody>
                         <tr>
-                            <th>Server Name</th>
+                            <th>伺服器名稱</th>
                             <th>UUID</th>
-                            <th>Owner</th>
-                            <th>Node</th>
-                            <th>Connection</th>
+                            <th>擁有者</th>
+                            <th>節點</th>
+                            <th>連接</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -53,11 +53,11 @@
                                 </td>
                                 <td class="text-center">
                                     @if($server->isSuspended())
-                                        <span class="label bg-maroon">Suspended</span>
+                                        <span class="label bg-maroon">已停權</span>
                                     @elseif(! $server->isInstalled())
-                                        <span class="label label-warning">Installing</span>
+                                        <span class="label label-warning">安裝中</span>
                                     @else
-                                        <span class="label label-success">Active</span>
+                                        <span class="label label-success">使用中</span>
                                     @endif
                                 </td>
                                 <td class="text-center">
