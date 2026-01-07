@@ -24,7 +24,7 @@ jobs:
         id: docker_meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/pterodactyl/panel
+          images: ghcr.io/${{ github.repository }}
           flavor: |
             latest=false
           tags: |
