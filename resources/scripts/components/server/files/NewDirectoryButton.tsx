@@ -26,7 +26,7 @@ const schema = object().shape({
 
 const generateDirectoryData = (name: string): FileObject => ({
     key: `dir_${name.split('/', 1)[0] ?? name}`,
-    name: name.replace(/^(/*)/, '').split('/', 1)[0] ?? name,
+    name: name.replace(/^(\/*)/, '').split('/', 1)[0] ?? name,
     mode: 'drwxr-xr-x',
     modeBits: '0755',
     size: 0,
