@@ -5,10 +5,14 @@
 ![GitHub Releases](https://img.shields.io/github/downloads/pterodactyl/panel/latest/total?style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/pterodactyl/panel?style=for-the-badge)
 
+# 同場提供 Blueprint 繁體中文版以及 Docker 容器
+由 Emma 製作的模組管理框架 [Blueprint 繁體中文版](https://github.com/Lingyu-ILY/blueprint-tw)，與上游同步更新  
+另有兩者的整合版 [Blueprint Docker](https://github.com/Lingyu-ILY/blueprint-docker-tw) 可供直接佈署並使用
+
 # Pterodactyl 面板
 
-Pterodactyl® 是一個免費、開源的遊戲伺服器管理面板，使用 PHP、React 與 Go 開發。  
-Pterodactyl 以安全性為設計核心，透過隔離的 Docker 容器來執行所有遊戲伺服器，同時向終端使用者提供美觀且直覺的使用者介面（UI）。
+Pterodactyl® 是一個免費、開源的遊戲伺服器管理面板，使用 PHP、React 與 Go 開發。
+Pterodactyl 以安全性為設計核心，透過隔離的 Docker 容器來執行所有遊戲伺服器，同時向終端使用者提供美觀且直覺的使用者介面。
 
 別再委屈自己使用次等方案，讓遊戲伺服器在你的平台上成為「一等公民」。
 
@@ -23,7 +27,7 @@ Pterodactyl 以安全性為設計核心，透過隔離的 Docker 容器來執行
 
 ## 贊助商
 
-在此由衷感謝下列贊助商，協助資助 Pterodactyl 的開發。
+在此由衷感謝下列贊助商，協助資助 Pterodactyl 的開發。  
 [有興趣成為贊助商嗎？](https://github.com/sponsors/pterodactyl)
 
 | 公司                                                                           | 介紹                                                                                                                                                                                                                                           |
