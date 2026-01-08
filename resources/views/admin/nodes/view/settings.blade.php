@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>{{ $node->name }}<small>配置您的節點設定。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li><a href="{{ route('admin.nodes') }}">節點</a></li>
         <li><a href="{{ route('admin.nodes.view', $node->id) }}">{{ $node->name }}</a></li>
         <li class="active">設定</li>

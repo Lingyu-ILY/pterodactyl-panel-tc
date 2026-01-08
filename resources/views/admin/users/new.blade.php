@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>建立使用者<small>新增一位使用者到系統中。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li><a href="{{ route('admin.users') }}">使用者</a></li>
         <li class="active">建立</li>
     </ol>

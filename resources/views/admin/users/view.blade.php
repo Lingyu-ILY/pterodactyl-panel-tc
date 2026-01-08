@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>{{ $user->name_first }} {{ $user->name_last}}<small>{{ $user->username }}</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li><a href="{{ route('admin.users') }}">使用者</a></li>
         <li class="active">{{ $user->username }}</li>
     </ol>

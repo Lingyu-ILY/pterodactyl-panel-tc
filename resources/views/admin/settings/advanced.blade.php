@@ -8,7 +8,7 @@
 @section('content-header')
     <h1>進階設定<small>設定 Pterodactyl 的進階選項。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li class="active">設定</li>
     </ol>
 @endsection

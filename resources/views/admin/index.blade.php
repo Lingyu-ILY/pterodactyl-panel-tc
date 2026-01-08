@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>管理概覽<small>快速查看您的系統。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li class="active">首頁</li>
     </ol>
 @endsection

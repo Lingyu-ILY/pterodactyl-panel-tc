@@ -8,7 +8,7 @@
 @section('content-header')
     <h1>面板設定<small>依你的需求設定 Pterodactyl。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li class="active">設定</li>
     </ol>
 @endsection

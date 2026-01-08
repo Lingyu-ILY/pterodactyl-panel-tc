@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>使用者<small>系統中所有已註冊的使用者。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li class="active">使用者</li>
     </ol>
 @endsection
