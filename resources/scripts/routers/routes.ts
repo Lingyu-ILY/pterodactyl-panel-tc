@@ -14,18 +14,18 @@ import AccountSSHContainer from '@/components/dashboard/ssh/AccountSSHContainer'
 import ActivityLogContainer from '@/components/dashboard/activity/ActivityLogContainer';
 import ServerActivityLogContainer from '@/components/server/ServerActivityLogContainer';
 
-// 各個 router 檔案本身都已適當地做了 code split — 因此上面的所有項目
-// 只會在該 router 被載入時才會跟著載入。
+// Each of the router files is already code split out appropriately — so
+// all of the items above will only be loaded in when that router is loaded.
 //
-// 這些特定的 lazy loaded routes 是為了避免載入伺服器儀表板中較重的頁面，
-// 因為它們只會在特定情況下才需要。
+// These specific lazy loaded routes are to avoid loading in heavy screens
+// for the server dashboard when they're only needed for specific instances.
 const FileEditContainer = lazy(() => import('@/components/server/files/FileEditContainer'));
 const ScheduleEditContainer = lazy(() => import('@/components/server/schedules/ScheduleEditContainer'));
 
 interface RouteDefinition {
     path: string;
-    // 如果傳入 undefined，此路由仍會被渲染到 router 中
-    // 但不會在子導覽選單中顯示導覽連結。
+    // If undefined is passed this route is still rendered into the router itself
+    // but no navigation link is displayed in the sub-navigation menu.
     name: string | undefined;
     component: React.ComponentType;
     exact?: boolean;
@@ -36,9 +36,9 @@ interface ServerRouteDefinition extends RouteDefinition {
 }
 
 interface Routes {
-    // "/account" 底下可用的所有路由
+    // All of the routes available under "/account"
     account: RouteDefinition[];
-    // "/server/:id" 底下可用的所有路由
+    // All of the routes available under "/server/:id"
     server: ServerRouteDefinition[];
 }
 
