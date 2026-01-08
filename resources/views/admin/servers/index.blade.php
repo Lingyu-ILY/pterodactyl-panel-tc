@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>伺服器<small>系統上所有可用的伺服器。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li class="active">伺服器</li>
     </ol>
 @endsection

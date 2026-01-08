@@ -7,7 +7,7 @@
 @section('content-header')
     <h1>{{ $server->name }}<small>編輯此伺服器的詳細資訊，包括擁有者和容器。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">管理員</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
         <li><a href="{{ route('admin.servers') }}">伺服器</a></li>
         <li><a href="{{ route('admin.servers.view', $server->id) }}">{{ $server->name }}</a></li>
         <li class="active">詳細資訊</li>

@@ -2,11 +2,11 @@
 
 return [
     'exceptions' => [
-        'delete_self' => 'You cannot delete your own account.',
-        'user_has_servers' => 'Cannot delete a user with active servers attached to their account. Please delete their servers before continuing.',
+        'delete_self' => '你無法刪除自己的帳號.',
+        'user_has_servers' => '無法刪除帳號下仍有啟用中伺服器的使用者。請先刪除其伺服器再繼續。',
     ],
     'notices' => [
-        'account_created' => 'Account has been created successfully.',
-        'account_updated' => 'Account has been successfully updated.',
+        'account_created' => '帳號已成功建立。',
+        'account_updated' => '帳號已成功更新。',
     ],
 ];

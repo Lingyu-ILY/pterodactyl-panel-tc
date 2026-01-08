@@ -106,14 +106,14 @@ export default () => {
                                 <p css={tw`mt-1 text-sm text-neutral-200`}>
                                     上次執行於：&nbsp;
                                     {schedule.lastRunAt ? (
-                                        format(schedule.lastRunAt, "MMM do 'at' h:mma")
+                                        format(schedule.lastRunAt, "MMM do '的' h:mma")
                                     ) : (
                                         <span css={tw`text-neutral-300`}>無</span>
                                     )}
                                     <span css={tw`ml-4 pl-4 border-l-4 border-neutral-600 py-px`}>
                                         下次執行於：&nbsp;
                                         {schedule.nextRunAt ? (
-                                            format(schedule.nextRunAt, "MMM do 'at' h:mma")
+                                            format(schedule.nextRunAt, "MMM do '的' h:mma")
                                         ) : (
                                             <span css={tw`text-neutral-300`}>無</span>
                                         )}
