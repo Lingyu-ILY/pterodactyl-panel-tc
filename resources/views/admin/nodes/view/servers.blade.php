@@ -32,7 +32,7 @@
     <div class="col-sm-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">程序管理器</h3>
+                <h3 class="box-title">伺服器列表</h3>
             </div>
             <div class="box-body table-responsive no-padding">
                 <table class="table table-hover">
