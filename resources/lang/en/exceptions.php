@@ -4,7 +4,7 @@ return [
     'daemon_connection_failed' => '嘗試與 Daemon 通訊時發生例外狀況，導致回傳 HTTP/:code 狀態碼。此例外已被記錄。',
     'node' => [
         'servers_attached' => '節點必須沒有任何已連結的伺服器才能刪除。',
-        'daemon_off_config_updated' => 'Daemon 設定<strong>已更新</strong>，但在嘗試自動更新 Daemon 上的設定檔時發生錯誤。你需要手動更新 Daemon 的設定檔（config.yml）以套用這些變更。',
+        'daemon_off_config_updated' => 'Daemon 設定已更新，但在嘗試自動更新 Daemon 上的設定檔時發生錯誤。你需要手動更新 Daemon 的設定檔（config.yml）以套用這些變更。',
     ],
     'allocations' => [
         'server_using' => '目前有伺服器指派使用此配置（allocation）。只有在沒有任何伺服器指派使用時，才可以刪除此配置。',
