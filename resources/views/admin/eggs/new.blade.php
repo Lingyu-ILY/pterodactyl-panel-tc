@@ -64,7 +64,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="pDockerImage" class="control-label">Docker 鏡像</label>
-                                <textarea id="pDockerImages" name="docker_images" rows="4" placeholder="quay.io/pterodactyl/service" class="form-control">{{ old('docker_images') }}</textarea>
+                                <textarea id="pDockerImages" name="docker_images" rows="4" placeholder="ghcr.io/pterodactyl/yolks" class="form-control">{{ old('docker_images') }}</textarea>
                                 <p class="text-muted small">使用此 Egg 的伺服器可用的 Docker 鏡像。每行輸入一個。如果提供多於一個值，使用者將能夠從此鏡像清單中選擇。</p>
                             </div>
                             <div class="form-group">
