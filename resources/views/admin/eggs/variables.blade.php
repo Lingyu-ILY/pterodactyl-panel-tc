@@ -76,7 +76,7 @@
                         <div class="form-group">
                             <label class="form-label">輸入規則</label>
                             <input type="text" name="rules" class="form-control" value="{{ $variable->rules }}" />
-                            <p class="text-muted small">這些規則使用標準的 <a href="https://laravel.com/docs/5.7/validation#available-validation-rules" target="_blank">Laravel Framework 驗證規則</a>定義。</p>
+                            <p class="text-muted small">這些規則使用標準的 <a href="https://laravel.com/docs/11.x/validation#available-validation-rules" target="_blank">Laravel Framework 驗證規則</a>定義。</p>
                         </div>
                     </div>
                     <div class="box-footer">
@@ -129,7 +129,7 @@
                     <div class="form-group">
                         <label class="control-label">輸入規則 <span class="field-required"></span></label>
                         <input type="text" name="rules" class="form-control" value="{{ old('rules', 'required|string|max:20') }}" placeholder="required|string|max:20" />
-                        <p class="text-muted small">這些規則使用標準的 <a href="https://laravel.com/docs/5.7/validation#available-validation-rules" target="_blank">Laravel Framework 驗證規則</a>定義。</p>
+                        <p class="text-muted small">這些規則使用標準的 <a href="https://laravel.com/docs/11.x/validation#available-validation-rules" target="_blank">Laravel Framework 驗證規則</a>定義。</p>
                     </div>
                 </div>
                 <div class="modal-footer">

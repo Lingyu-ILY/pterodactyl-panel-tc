@@ -18,7 +18,7 @@ const ApiKeyModal = ({ apiKey }: Props) => {
             <p css={tw`text-sm mb-6`}>
                 你所申請的 API 金鑰如下所示。請妥善保存，之後將不會再次顯示。
             </p>
-            <pre css={tw`text-sm bg-neutral-900 rounded py-2 px-4 font-mono`}>
+            <pre css={tw`overflow-x-scroll text-sm bg-neutral-900 rounded py-2 px-4 font-mono`}>
                 <CopyOnClick text={apiKey}>
                     <code css={tw`font-mono`}>{apiKey}</code>
                 </CopyOnClick>

@@ -21,6 +21,9 @@ return [
         ],
     ],
     'user' => [
+        'user' => [
+            'create' => 'Created a new user :email',
+        ],
         'account' => [
             'email-changed' => '已將電子郵件從 :old 變更為 :new',
             'password-changed' => '已變更密碼',
@@ -67,7 +70,7 @@ return [
             'delete' => '已刪除資料庫：:name',
         ],
         'file' => [
-            'compress_one' => '已壓縮 :directory:file',
+            'compress_one' => '已壓縮 :directory:files.0',
             'compress_other' => '已在 :directory 壓縮 :count 個檔案',
             'read' => '已查看 :file 的內容',
             'copy' => '已建立 :file 的副本',

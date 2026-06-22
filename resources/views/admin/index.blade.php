@@ -29,7 +29,7 @@
                 @if ($version->isLatestPanel())
                     您正在執行 Pterodactyl Panel 版本 <code>{{ config('app.version') }}</code>。您的面板已是最新版本！
                 @else
-                    您的面板<strong>不是最新版本！</strong>最新版本為 <a href="https://github.com/Pterodactyl/Panel/releases/v{{ $version->getPanel() }}" target="_blank"><code>{{ $version->getPanel() }}</code></a>，而您目前執行的是版本 <code>{{ config('app.version') }}</code>。
+                    您的面板<strong>不是最新版本！</strong>最新版本為 <a href="https://github.com/Pterodactyl/Panel/releases/v{{ $version->getPanel() }}" target="_blank"><code>{{ $version->getPanel() }}</code></a>，而您目前執行的是版本 <code>{{ config('app.version') }}</code>. 你可以在 <a href="https://pterodactyl.io/panel/1.0/updating.html">這裡</a> 找到如何更新控制面板的說明。
                 @endif
             </div>
         </div>
