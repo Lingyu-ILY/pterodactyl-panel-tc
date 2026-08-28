@@ -4,6 +4,7 @@ return [
     'exceptions' => [
         'no_new_default_allocation' => '你正在嘗試刪除此伺服器的預設配置（allocation），但沒有可用的替代配置。',
         'marked_as_failed' => '此伺服器被標記為先前安裝失敗。在此狀態下無法切換目前狀態。',
+        'skipping_install_script' => '這台伺服器已設定為略過其 Egg 的安裝腳本。在停用此設定之前，無法使用重新安裝功能。',
         'bad_variable' => ':name 變數驗證時發生錯誤。',
         'daemon_exception' => '嘗試與 Daemon 通訊時發生例外狀況，導致回傳 HTTP/:code 狀態碼。此例外已被記錄。（request id: :request_id）',
         'default_allocation_not_found' => '在此伺服器的配置（allocation）中找不到所請求的預設配置。',

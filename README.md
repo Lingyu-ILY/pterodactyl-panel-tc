@@ -32,12 +32,12 @@ Pterodactyl 以安全性為設計核心，透過隔離的 Docker 容器來執行
 
 | 公司                                                                           | 介紹                                                                                                                                                                                                                                           |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aussie Server Hosts**](https://aussieserverhosts.com/)                         | 由澳洲本地擁有並營運、主打高效能的伺服器託管服務，服務對象涵蓋澳洲與紐西蘭地區一些最吃重需求的遊戲伺服器。                                                                                                 |
-| [**BisectHosting**](https://www.bisecthosting.com/)                               | BisectHosting 自 2012 年起提供 Minecraft、Valheim 及其他伺服器託管服務，以最高可靠度與極快速支援聞名。                                                                                                 |
-| [**MineStrator**](https://minestrator.com/)                                       | 想找最頂級的法國 Minecraft 伺服器託管商嗎？超過 24,000 名 Discord 成員信任我們，歡迎來試用！                                                                                                 |
-| [**HostEZ**](https://hostez.io)                                                   | 提供美國與歐盟地區 Rust 與 Minecraft 託管服務，具備 DDoS 防護的裸機、VPS 與機櫃代管（colocation），低延遲、高上線率與最大可用性。EZ！                                                                                                     |
-| [**Blueprint**](https://blueprint.zip/?utm_source=pterodactyl&utm_medium=sponsor) | 透過持續成長的 Blueprint framework 建立並安裝 Pterodactyl 外掛與主題——它是 Pterodactyl 的套件管理器（package-manager）。可同時使用多個修改而不必擔心衝突，並善用龐大的擴充生態系。 |
-| [**indifferent broccoli**](https://indifferentbroccoli.com/)                      | indifferent broccoli 是遊戲伺服器託管與租賃公司，提供優質運算資源，消除延遲、卡頓與複雜設定——讓你專注在真正好玩的部分。                              |
+| [**Infraly, LLC**](https://infraly.co/)                                           | Infraly is an infrastructure company powering the next generation of online services. Through their brands, Infraly delivers cutting-edge solutions across multiple markets. Their vertically integrated approach provides unmatched performance, scalability, and reliability, giving our customers full control.                                                                                     |
+| [**Hosturly**](https://hosturly.com/)                                             | Hosturly is an enterprise hosting provider. They provide cost-effective, high-performance, and reliable services, including VPS, Web, Dedicated, and Colocation.                                                                                |
+| [**Physgun**](https://physgun.com/)                                               | Physgun is a game server hosting provider. Most providers rent rack space and rebrand a panel. At Physgun, they engineer the performance, write the features, and staff the support. Physgun truly is game hosting perfected!                   |
+| [**WISP**](https://wisp.gg/)                                                      | WISP is an industry-leading SaaS platform for game server management, designed for hosting companies, gaming organizations, and enthusiasts. WISP combines modern, intuitive interfaces with powerful tools, making server deployment and administration seamless, scalable, and efficient.                                                                                                                 |
+| [**Buildurly**](https://buildurly.com/)                                           | Buildurly is a hardware procurement company. They deliver tailored, enterprise-grade hardware solutions designed around your unique needs. From sourcing to delivery, Buildurly's white-glove service ensures a seamless, worry-free, professional experience.                                                                                                                                          |
+| [**indifferent broccoli**](https://indifferentbroccoli.com/)                      | indifferent broccoli is a game server hosting and rental company. With them, you get top-notch computer power for your gaming sessions. They destroy lag, latency, and complexity--letting you focus on the fun stuff.                         |
 
 ### 支援的遊戲
 
@@ -65,7 +65,7 @@ Pterodactyl 透過 Docker 容器隔離每個實例，因此能支援各式各樣
 * Xonotic
 * Starmade
 * Discord ATLBot, 以及大多數 Node.js/Python 的 Discord 機器人
-* [以及更多...](https://pterodactyleggs.com)
+* [以及更多...](https://eggs.pterodactyl.io)
 
 ## 授權
 
